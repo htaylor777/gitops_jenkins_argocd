@@ -27,7 +27,7 @@ node {
     
     stage('Trigger ManifestUpdate') {
                 echo "triggering updatemanifestjob"
-                build job: 'updatemanifest', parameters: [string(name: 'DOCKERTAG', value: env.BUILD_NUMBER)]
+                build job: 'gitops_manifest_local', parameters: [string(name: 'DOCKERTAG', value: env.BUILD_NUMBER)]
         }
     stage('Displaying app file') {
                 echo "cat app.py:" 
