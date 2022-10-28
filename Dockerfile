@@ -14,9 +14,7 @@ RUN pip install --trusted-host pypi.python.org -r requirements.txt
 EXPOSE 5429
 
 # execute the Flask app
-#CMD ["python", "app.py"]
-
-CMD [ "flask", "run" ]
+CMD ["python", "app.py"]
 
 COPY requirements.txt requirements.txt
 
